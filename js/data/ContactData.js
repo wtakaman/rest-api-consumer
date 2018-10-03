@@ -7,7 +7,7 @@ braviApp.factory('contactData', function($q, $http) {
             var dfd = $q.defer();
             $http({
                 method: 'GET',
-                url: 'http://local.bravi.com.br:3001/contact/',
+                url: 'https://bravi-rest-api.herokuapp.com/contact/',
                 data: data
             }).success(function (retorno) {
                 dfd.resolve(retorno);
@@ -20,7 +20,7 @@ braviApp.factory('contactData', function($q, $http) {
             var dfd = $q.defer();
             $http({
                 method: 'POST',
-                url: 'http://local.bravi.com.br:3001/contact/',
+                url: 'https://bravi-rest-api.herokuapp.com/contact/',
                 headers: {
                     "Content-Type": "application/json;charset=UTF-8",
                 },
@@ -36,7 +36,7 @@ braviApp.factory('contactData', function($q, $http) {
             var dfd = $q.defer();
             $http({
                 method: 'PUT',
-                url: 'http://local.bravi.com.br:3001/contact/' + data.id,
+                url: 'https://bravi-rest-api.herokuapp.com/contact/' + data.id,
                 headers: {
                     "Content-Type": "application/json;charset=UTF-8",
                 },
@@ -52,7 +52,7 @@ braviApp.factory('contactData', function($q, $http) {
             var dfd = $q.defer();
             $http({
                 method: 'DELETE',
-                url: 'http://local.bravi.com.br:3001/contact/' + data.id
+                url: 'https://bravi-rest-api.herokuapp.com/contact/' + data.id
             }).success(function (retorno) {
                 dfd.resolve(retorno);
             }).error(function (xhr, ajaxOptions, thrownError) {
